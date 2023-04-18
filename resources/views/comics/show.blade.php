@@ -44,4 +44,16 @@
         </div>
     </div>
 
+    <div class="row">
+        <div class="col-12">
+            <a href="{{ route('comics.edit', $comic->id) }}">EDIT</a>
+        </div>
+    </div>
+
+    <div class="row">
+        <div class="col-12">
+            <a href="{{ route('comics.index') }}">INDEX</a>
+        </div>
+    </div>
+
 </div>
