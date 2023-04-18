@@ -1,6 +1,9 @@
 @extends('layouts.layout')
 
-<table>
+<a href="{{ route('comics.create') }}">create</a>
+
+
+<table class="index-table">
 
     <thead>
         <tr>
@@ -30,6 +33,7 @@
                 </td>
             </tr>
         @endforeach
+
     </tbody>
 
 </table>
