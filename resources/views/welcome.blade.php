@@ -18,7 +18,7 @@
 <body>
 
     <main>
-        <h1>START</h1>
+        <a href="{{ route('comics.index') }}">INDEX</a>
     </main>
 
 </body>

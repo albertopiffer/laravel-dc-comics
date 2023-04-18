@@ -1,6 +1,6 @@
 @extends('layouts.layout')
 
-<a href="{{ route('comics.create') }}">create</a>
+<a href="{{ route('comics.create') }}">CREATE</a>
 
 
 <table class="index-table">
