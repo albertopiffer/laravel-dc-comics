@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Comic;
 
 class ComicsController extends Controller
 {
@@ -13,7 +14,10 @@ class ComicsController extends Controller
      */
     public function index()
     {
-        //
+        $comics = Comic::all();
+        $page_title = 'comics-list';
+
+        return view('comics.index', compact('comics'));
     }
 
     /**
