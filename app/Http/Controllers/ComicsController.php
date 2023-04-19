@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use Illuminate\Validation\Rule;
 use App\Models\Comic;
 
 class ComicsController extends Controller
@@ -76,6 +77,23 @@ class ComicsController extends Controller
     public function edit(Comic $comic)
     {
         return view('comics.edit', compact('comic'));
+    }
+
+    public function validation(Request $request)
+    {
+        return $request->validate([
+
+            'title' => 'required|max:255|min:3',
+            'description' => 'required|string',
+            'thumb' => 'required|url',
+            'price' => 'required|numeric',
+            'series' => 'required|string',
+            'sale_date' => 'required|date',
+            'type' => [
+                'required',
+                Rule::in(['comic', 'graphic', 'magazine'])
+            ]
+        ]);
     }
 
     /**
